@@ -1,0 +1,46 @@
+
+@media screen and (max-width: 1200px){
+    .text-more.active{
+        height: 33.8rem;
+    }
+}
+
+@media screen and (max-width: 992px){
+    .left-wraper{
+        padding-right: 0;
+    }
+    .right-wraper{
+        padding-left: 0;
+        margin-top: 3rem;
+    }
+
+    .left-description{
+        display: none;
+    }
+
+    .sup-description{
+        display: block;
+    }
+
+    
+}
+
+@media screen and (max-width: 768px){
+    #banner .col-lg-4{
+        width: 90%;
+    }
+
+    .sup-text-more.active{
+        height: 33.8rem;
+    }
+}
+
+@media screen and (max-width: 576px){
+    .product{
+        margin-top: .8rem;
+    }
+    
+    .sup-text-more.active{
+        height: 38.2rem;
+    }
+}

@@ -1,0 +1,41 @@
+@media screen and (max-width: 1400px){
+    .banner-right{
+        display: none;
+    }
+
+    #banner .col-lg-4{
+        width: 60%;
+    }
+
+    .banner-rate__left{
+        width: auto;
+        margin-right: 7rem;
+    }
+   
+}
+
+@media screen and (max-width: 768px){
+    #banner .col-lg-4{
+        width: 90%;
+    }
+}
+
+
+@media screen and (max-width: 576px){
+    .banner-rate__author{
+        display: none !important;
+    }
+
+    .banner-btn,
+    .banner-btn__link{
+        display: inline-block;
+    }
+
+    .banner-btn__link{
+        margin-right: 1.6rem;
+    }
+    
+    .banner-btn > button {
+        margin: 2rem 0 0 !important;
+    }
+}

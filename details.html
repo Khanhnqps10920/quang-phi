@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="./sources/img/favicon/favicon48x48.webp"/>
+    <script src="https://kit.fontawesome.com/d9876ed7d9.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./sources/css/base.css">
+    <link rel="stylesheet" href="./sources/responsive/main-rps.css">
+    <link rel="stylesheet" href="./sources/css/detailsCSS/details.css">
+    <link rel="stylesheet" href="./sources/responsive/details-RPS/detail-rps.css">
+    <title>QP</title>
+</head>
+<body>
+    <template id="favourite-cart">
+        <div class="favourite-item">
+            <div class="favourite-product">
+                <img src="" alt="">
+                <div class="favoutite-product__info">
+                    <div class="favoutite-product__name"></div>
+                    <div class="favoutite-product__price"></div>
+                </div>
+                <div class="favourite-remove-item">
+                    <i class="fa-solid fa-heart-circle-minus"></i>
+                </div>
+                
+            </div>
+        </div>
+    </template>
+
+    <template id="img-template">
+        <div class="product-imgs">
+            <div class="main-imgs">
+                <div class="main-img active"><img src="" alt=""></div>
+                <div class="main-img"><img src="./sources/img/car.jpg" alt=""></div>
+                <div class="main-img"><img src="" alt=""></div>
+                <div class="main-img"><img src="" alt=""></div>
+                <div class="main-img"><img src="" alt=""></div>
+            </div>
+            <div class="product-tabs">
+                <div id="1" class="product-tab active"><img src="" alt=""></div>
+                <div id="2" class="product-tab"><img src="" alt=""></div>
+                <div id="3" class="product-tab"><img src="" alt=""></div>
+                <div id="4" class="product-tab"><img src="" alt=""></div>
+                <div id="5" class="product-tab"><img src="" alt=""></div>
+            </div>
+        </div>
+    </template>
+
+    <template id="info-template">
+        <div class="product-info">
+            <div class="product-name">
+                <h3></h3>
+            </div>
+            <div class="product-features">
+                <span class="features">
+                    <p></p>
+                    <i class="fas fa-circle dot-red"></i>
+                </span>
+                <span class="features">
+                    <p></p>
+                    <i class="fas fa-circle dot-red"></i>
+                </span>
+                <span class="features">
+                    <p></p>
+                    <i class="fas fa-circle dot-red"></i>
+                </span>
+                <span class="features">
+                    <p></p>
+                </span>
+            </div>
+            <div class="product-prices">
+                <div class="product-price"></div>
+                <span class="product-old-price"></span>
+                <div class="product-favourite">
+                    <div class="favourite-add">
+                        <i class="fa-solid fa-heart-circle-plus"></i>
+                    </div>
+                    <div class="favourite-added">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+                </div>
+            </div>
+    </template>
+
+    <template id="right-describe">
+        <ul class="describe-list">
+            <li class="describe-list__item"> <p>Make:</p><span></span></li>
+            <li class="describe-list__item"> <p>Model:</p><span></span></li>
+            <li class="describe-list__item"> <p>Color:</p><span></span></li>
+            <li class="describe-list__item"> <p>Drive Type:</p><span></span></li>
+            <li class="describe-list__item"> <p>Tranmisstion:</p><span></span></li>
+            <li class="describe-list__item"> <p>Condition:</p><span></span></li>
+            <li class="describe-list__item"> <p>Years:</p><span></span></li>
+            <li class="describe-list__item"> <p>Fuel Type:</p><span></span></li>
+            <li class="describe-list__item"> <p>Engine Size:</p><span></span></li>
+            <li class="describe-list__item"> <p>Doors:</p><span></span></li>
+            <li class="describe-list__item"> <p>Cylinders:</p><span></span></li>
+            <li class="describe-list__item"> <p>Color:</p><span></span></li>
+            <li class="describe-list__item"> <p>VIN:</p><span></span></li>
+        </ul>
+    </template>
+
+    <header">
+            <nav class="navbar">
+                <div class="container">
+                    <div class="nav-content">
+                        <div class="nav-left">
+                            <a href="index.html" class="nav-left__logo">
+                                <img src="./sources/img/logo-light.png.webp" alt="">
+                            </a>
+                        </div>
+
+                        <div class="nav-right">
+                            <ul class="nav-right__list">
+                                <li class="nav-right__item">
+                                    <a href="index.html" class="nav-right__item-link">Home</a>
+                                </li>
+                                <li class="nav-right__item">
+                                    <a href="products.html" class="nav-right__item-link">Car Products</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div id="favourite" class="nav-right__item">
+                            <div class="favourite-header">
+                                <span>Favourite</span>
+                                <i class="fa-solid fa-heart-circle-check"></i>
+                            </div>
+                            
+                            <div class="favourite-wraper">
+                                <div class="favourite-content">
+
+                                    <div class="close-favourite">
+                                        <i class="fa-solid fa-xmark"></i>
+                                    </div>
+                                    
+                                    <h3 class="title">Farourite Car List</h3>
+                                    <div class="favourite-empty">
+                                        <img src="./sources/img/no.cart.png" alt="">
+                                    </div>
+                                    <div class="favourite-list"></div>
+                                    <div class="favourite-total">
+                                        Total:
+                                        <span>50</span>
+                                        Favourited
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="nav-menu nav-mobile">
+                            <div class="nav-menu__icon">
+                                <i class="fa-solid fa-bars"></i>
+                            </div>
+                            <div class="nav-menu__content">
+                                <ul class="nav-right__list list-mobile">
+                                    <li class="nav-right__item nav-item-mobile">
+                                        <a href="index.html" class="nav-right__item-link">Home</a>
+                                        <div class="nav-menu__close">
+                                            <i class="fa-solid fa-xmark"></i>
+                                        </div>
+                                    </li>
+    
+                                    <li class="nav-right__item nav-item-mobile">
+                                        <a href="products.html" class="nav-right__item-link">Car Product</a>
+                                    </li>
+    
+                                    <li class="nav-right__item nav-item-mobile">
+                                        <a href="#" class="nav-right__item-link">About us</a>
+                                    </li>
+    
+                                    <li class="nav-right__item nav-item-mobile">
+                                        <a href="#" class="nav-right__item-link">Contact Us</a>
+                                    </li>
+                                </ul>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+    </header>
+
+    <div class="loading">
+        <div class="loading-wraper">
+            <div class="inner one"></div>
+            <div class="inner two"></div>
+            <div class="inner three"></div>
+        </div>
+    </div>
+
+    <div class="after-loading">
+        <section id="main">
+            <div class="container">
+    
+                <section id="breadcrumb">
+                    <div class="container">
+                        <ul class="breadcrumb-list">
+                            <li class="breadcrumb-item">
+                                <a href="index.html">
+                                    <i class="breadcrumb-item__icon fa-solid fa-house-chimney"></i>
+                                </a>
+                            </li>
+                            <li class="breadcrumb-item">
+                                <a href="#">
+                                    <i class="breadcrumb-item__icon fa-solid fa-angles-right"></i>
+                                    <span class="breadcrumb-item__text">Detail</span>
+                                </a>
+                            </li>
+                            <li class="breadcrumb-item">
+                                <a href="#">
+                                    <i class="breadcrumb-item__icon fa-solid fa-angles-right"></i>
+                                    <span class="breadcrumb-item__text">Product</span>
+                                </a>
+                            </li>
+                            <li class="breadcrumb-item">
+                                <a href="#">
+                                    <i class="breadcrumb-item__icon fa-solid fa-angles-right"></i>
+                                    <span class="breadcrumb-item__text name-car"></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+    
+                <div class="product">
+                    <div class="row">
+                        <div class="col-lg-7 col-md-full">
+                            <div class="left-wraper">
+                                <div class="left-content">
+                                    
+                                </div>
+
+                                <div class="left-description">
+                                   <h1>Description</h1>
+                                   <div class="left-description__text">
+                                       <p>How the adventure ended will be seen anon.
+                                            Aouda was anxious, though she said nothing.
+                                             As for Passepartout, he thought Mr. Fogg's manoeuvre simply glorious.
+                                              The captain had said “between eleven and twelve knots,” and the Henrietta confirmed his prediction.
+                                            <br>
+                                            <br>
+                                           <span class="text-more">
+                                            If, then—for there were “ifs” still—the sea did not become too boisterous,
+                                            if the wind did not veer round to the east, if no accident happened to the boat or its machinery,
+                                             the Henrietta might cross the three thousand miles from New York to Liverpool in the nine days,
+                                              between the 12th and the 21st of December. 
+                                            It is true that, once arrived, the affair on board the Henrietta,
+                                            added to that of the Bank of England, might create more difficulties for Mr. Fogg than he imagined or could desire.
+                                            During the first days, they went along smoothly enough. 
+                                           The sea was not very unpropitious, the wind seemed stationary in the north-east,
+                                            the sails were hoisted, and the Henrietta ploughed across the waves like a real trans-Atlantic steamer.
+                                           </span>
+                                       </p>
+                                    </div>
+                                    <div class="left-description__btn">
+                                        <button id="1" class="show show-more">Show More</button>
+                                        <button id="1" class="show show-less">Show Less</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="col-lg-5 col-md-full">
+                            <div class="right-wraper">
+                                <div class="right-clasify"></div>
+                                <div class="right-describe"></div>
+                                <div class="left-description sup-description">
+                                    <h1>Description</h1>
+                                    <div class="left-description__text">
+                                        <p>How the adventure ended will be seen anon.
+                                             Aouda was anxious, though she said nothing.
+                                              As for Passepartout, he thought Mr. Fogg's manoeuvre simply glorious.
+                                               The captain had said “between eleven and twelve knots,” and the Henrietta confirmed his prediction.
+                                             <br>
+                                             <br>
+                                            <span class="text-more">
+                                             If, then—for there were “ifs” still—the sea did not become too boisterous,
+                                             if the wind did not veer round to the east, if no accident happened to the boat or its machinery,
+                                              the Henrietta might cross the three thousand miles from New York to Liverpool in the nine days,
+                                               between the 12th and the 21st of December. 
+                                             It is true that, once arrived, the affair on board the Henrietta,
+                                             added to that of the Bank of England, might create more difficulties for Mr. Fogg than he imagined or could desire.
+                                             During the first days, they went along smoothly enough. 
+                                            The sea was not very unpropitious, the wind seemed stationary in the north-east,
+                                             the sails were hoisted, and the Henrietta ploughed across the waves like a real trans-Atlantic steamer.
+                                            </span>
+                                        </p>
+                                     </div>
+                                     <div class="left-description__btn">
+                                         <button id="2" class="show show-more">Show More</button>
+                                         <button id="2" class="show show-less">Show Less</button>
+                                     </div>
+                                </div>
+                                <div class="right-contact">
+                                    <button class="right-contact__btn">
+                                        <i class="fa-solid fa-phone"></i>
+                                        Call Mr.PHI 0964. 298. 523
+                                    </button>
+
+                                    <button class="right-contact__btn">
+                                        <i class="fa-brands fa-facebook-messenger"></i>
+                                        Contact via FaceBook
+                                    </button>
+
+                                    <button class="right-contact__btn">
+                                        <i class="fa-solid fa-envelope"></i>
+                                        Send Mail for Us
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="container">
+                <div class="footer-top">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6 col-12">
+                            <div class="footer-box">
+                                <h4 class="footer-box__title">about us</h4>
+                                <p>Quang Phi Auto, Award-winning, family owned dealership of
+                                    new and pre-owned vehicles with several locations across the city.
+                                     Lowest prices and the best customer service guaranteed.</p>
+                                <ul class="footer-box__about">
+                                    <li>
+                                        <a href="">
+                                            <i class="fa-brands fa-square-facebook"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <i class="fa-brands fa-square-instagram"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <i class="fa-brands fa-square-youtube"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <i class="fa-brands fa-square-snapchat"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+    
+                        <div class="col-lg-2 col-md-6 col-12">
+                            <div class="footer-box">
+                                <h4 class="footer-box__title"></h4>
+                                <ul class="footer-box__service">
+                                    <li>
+                                        <a href="">
+                                            <i class="fa-solid fa-chevron-right"></i>
+                                            Listing</a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <i class="fa-solid fa-chevron-right"></i>
+                                            FAQ</a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <i class="fa-solid fa-chevron-right"></i>
+                                            About Us</a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <i class="fa-solid fa-chevron-right"></i>
+                                            Service</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+    
+                        <div class="col-lg-2 col-md-6 col-12">
+                            <div class="footer-box">
+                                <h4 class="footer-box__title"></h4>
+                                <ul class="footer-box__service">
+                                    <li>
+                                        <a href="">
+                                            <i class="fa-solid fa-chevron-right"></i>
+                                            Blog</a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <i class="fa-solid fa-chevron-right"></i>
+                                            Our team</a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <i class="fa-solid fa-chevron-right"></i>
+                                            ABC
+                                            </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <i class="fa-solid fa-chevron-right"></i>
+                                            XYZ
+                                            </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+    
+                        <div class="col-lg-4 col-md-6 col-12">
+                            <div class="footer-box">
+                                <h4 class="footer-box__title">contact us</h4>
+                                <ul class="footer-box__contact">
+                                    <li>
+                                        <i class="fa-solid fa-location-crosshairs"></i>
+                                        <span>address</span>    
+                                        <p>#2997 Road, Ho Chi Minh City, Vietnam</p>
+                                        </a>
+                                    </li>
+    
+                                    <li>
+                                        <i class="fa-solid fa-mobile-screen-button"></i>
+                                        <span>phone</span>   
+                                        <p>0964-298-523</p>
+                                        </a>
+                                    </li>
+    
+                                    <li>
+                                        <i class="fa-solid fa-fax"></i>
+                                        <span>fax</span>    
+                                        <p>(123) 123 456</p>
+                                        </a>
+                                    </li>
+    
+                                    <li>
+                                        <i class="fa-solid fa-envelope-open-text"></i>
+                                        <span>email</span>  
+                                        <p>xx.quangphi.2.9@gmail.com</p>
+                                        </a>
+                                    </li>
+    
+                                    
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="footer-bottom">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <span>© Copyright 2022</span>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="author-name">
+                                <span>Made By Quang Phi</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="./sources/javascrip/untils.js"></script>
+    <script type="module" src="./sources/javascrip/details.mjs"></script>
+    <script src="./sources/javascrip/base.js"></script>
+</body>
+</html>

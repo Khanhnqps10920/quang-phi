@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="./sources/img/favicon/favicon48x48.webp"/>
+    <script src="https://kit.fontawesome.com/402362fd83.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./sources/css/base.css">
+    <link rel="stylesheet" href="./sources/responsive/main-rps.css">
+    <link rel="stylesheet" href="./sources/css/productsCSS/products.css">
+    <link rel="stylesheet" href="./sources/responsive/products-RPS/products-rps.css">
+    <title>QP</title>
+</head>
+<body>
+    <template id="favourite">
+        <div class="favourite-item">
+            <div class="favourite-product">
+                <img src="" alt="">
+                <div class="favoutite-product__info">
+                    <div class="favoutite-product__name"></div>
+                    <div class="favoutite-product__price"></div>
+                </div>
+                <div class="favourite-remove-item">
+                    <i class="fa-solid fa-heart-circle-minus"></i>
+                </div>
+                
+            </div>
+        </div>
+    </template>
+
+    <template id="product-detail">
+        <div class="car-item-box">
+            <div class="row">
+                <div class="col-lg-4 col-md-full col-12">
+                    <div class="car-box__image">
+                        <img src="./sources/img/audi-1.jpg" alt="">
+                        <div class="car-img-overlay">
+                            <ul class="overlay-list">
+                                <li class="overlay-list__item">
+                                    <a class="overlay-list__item-link" href="">
+                                        <i class="fa-solid fa-link"></i>
+                                    </a>
+                                </li>
+                                <li class="overlay-list__item">
+                                    <i class="fa-sharp fa-solid fa-expand"></i>
+                                </li>
+                                <li class="overlay-list__item">
+                                    <i class="fa-brands fa-cc-visa"></i>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col-lg-8 col-md-full col-12">
+                    <div class="car-info">
+                        <div class="product-favourite">
+                            <div class="favourite-add">
+                                <i class="fa-solid fa-heart-circle-plus"></i>
+                            </div>
+                            <div class="favourite-added">
+                                <i class="fa-solid fa-heart"></i>
+                            </div>
+                        </div>
+                        <div class="car-info__title">
+                            <a class="car-info__title-link" href=""></a>
+                            <p></p>
+                        </div>
+                        <div class="car-info__price">
+                            <span class="old-price"></span>
+                            <span class="new-price"></span>
+                        </div>
+                        <div class="car-info__feature">
+                            <ul>
+                                <li class="features">
+                                    <i class="fas fa-calendar-alt"></i>
+                                    <span class="feature"></span>
+                                </li>
+                                <li class="features">
+                                    <i class="fa-solid fa-gas-pump"></i>
+                                    <span class="feature"></span>
+                                </li>
+                                <li class="features">
+                                    <i class="fa-solid fa-car"></i>
+                                    <span class="feature"></span>
+                                </li>
+                                <li class="features">
+                                    <i class="fa-solid fa-car"></i>
+                                    <span class="feature"></span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="car-info__btn">
+                            <a class="car-info__btn-link" href="product.html">Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <header">
+            <nav class="navbar">
+                <div class="container">
+                    <div class="nav-content">
+                        <div class="nav-left">
+                            <a href="index.html" class="nav-left__logo">
+                                <img src="./sources/img/logo-light.png.webp" alt="">
+                            </a>
+                        </div>
+
+                        <div class="nav-right">
+                            <ul class="nav-right__list">
+                                <li class="nav-right__item">
+                                    <a href="index.html" class="nav-right__item-link">Home</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div id="favourite" class="nav-right__item">
+                            <div class="favourite-header">
+                                <span>Favourite</span>
+                                <i class="fa-solid fa-heart-circle-check"></i>
+                            </div>
+                            
+                            <div class="favourite-wraper">
+                                <div class="favourite-content">
+
+                                    <div class="close-favourite">
+                                        <i class="fa-solid fa-xmark"></i>
+                                    </div>
+                                    
+                                    <h3 class="title">Farourite Car List</h3>
+                                    <div class="favourite-empty">
+                                        <img src="./sources/img/no.cart.png" alt="">
+                                    </div>
+                                    <div class="favourite-list"></div>
+                                    <div class="favourite-total">
+                                        Total:
+                                        <span>50</span>
+                                        Favourited
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="nav-menu nav-mobile">
+                            <div class="nav-menu__icon">
+                                <i class="fa-solid fa-bars"></i>
+                            </div>
+                            <div class="nav-menu__content">
+                                <ul class="nav-right__list list-mobile">
+                                    <li class="nav-right__item nav-item-mobile">
+                                        <a href="index.html" class="nav-right__item-link">Home</a>
+                                        <div class="nav-menu__close">
+                                            <i class="fa-solid fa-xmark"></i>
+                                        </div>
+                                    </li>
+    
+                                    <li class="nav-right__item nav-item-mobile">
+                                        <a href="details.html" class="nav-right__item-link">Car Detail</a>
+                                    </li>
+    
+                                    <li class="nav-right__item nav-item-mobile">
+                                        <a href="#" class="nav-right__item-link">About us</a>
+                                    </li>
+    
+                                    <li class="nav-right__item nav-item-mobile">
+                                        <a href="details.html" class="nav-right__item-link">Contact Us</a>
+                                    </li>
+                                </ul>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+    </header>
+
+    <section id="banner">
+        <div class="container">
+            <div class="banner-text">
+                <h1>
+                    chose your 
+                    <span>dream</span>
+                    <i class="fa-solid fa-heart"></i>
+                </h1>
+            </div>
+        </div>
+    </section>
+
+    <section id="breadcrumb">
+        <div class="container">
+            <ul class="breadcrumb-list">
+                <li class="breadcrumb-item">
+                    <a href="index.html">
+                        <i class="breadcrumb-item__icon fa-solid fa-house-chimney"></i>
+                    </a>
+                </li>
+                <li class="breadcrumb-item">
+                    <a href="product.html">
+                        <i class="breadcrumb-item__icon fa-solid fa-angles-right"></i>
+                        <span class="breadcrumb-item__text">Detail</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="main">
+        <div class="#main-wraper">
+            <div class="container">
+                <div class="row">
+                    <aside class="col-lg-4 col-md-4 col-12">
+                        <div class="aside-wraper">
+                            <div class="car-search">
+
+                                <h6 class="title">
+                                    Cars Search
+                                </h6>
+
+                                <div class="search">
+                                    <input type="search" placeholder="Search..." class="search__input">
+                                    <button class="search__btn">
+                                        <i class="fas fa-search"></i>
+                                    </button>
+                                </div>
+
+                                <div class="car-search__list">
+                                    <ul></ul>
+                                </div>
+                            </div>
+
+                            <div class="car-filter">
+                                <h6 class="title">
+                                    Cars Filter
+                                </h6>
+
+                                <div class="car-filter__total"></div>
+
+                                <button class="car-filter__btn">
+                                    <a class="car-filter__btn-link" href="">VIEW ALL</a>
+                                </button>
+
+                                <div class="car-filter__select">
+                                    <select class="select">
+                                        <option>Year</option>
+                                        <option>2013</option>
+                                        <option>2014</option>
+                                        <option>2015</option>
+                                        <option>2016</option>
+                                        <option>2017</option>
+                                        <option>2018</option>
+                                        <option>2019</option>
+                                        <option>2020</option>
+                                        <option>2021</option>
+                                        <option>2022</option>
+                                    </select>
+                                    <select class="select">
+                                        <option>Make</option>
+                                        <option>Audi</option>
+                                        <option>Bentley</option>
+                                        <option>BMW</option>
+                                        <option>Bugatti</option>
+                                        <option>Caddillac</option>
+                                        <option>Chervolet</option>
+                                        <option>Ferrarri</option>
+                                        <option>McLaren</option>
+                                        <option>Toyota</option>
+                                        <option>Land Rover</option>
+                                    </select>
+                                    <select class="select">
+                                        <option>Body Style</option>
+                                        <option>Convertible</option>
+                                        <option>Couple</option>
+                                        <option>HatchBack</option>
+                                        <option>Sedan</option>
+                                        <option>SUV</option>
+                                        <option>Truck</option>
+                                        <option>Wagon</option>
+                                    </select>
+                                    <select class="select">
+                                        <option>Fuel Economy</option>
+                                        <option>Diesel</option>
+                                        <option>Petrol</option>
+                                        <option>Electric</option>
+                                    </select>
+                                    <select class="select">
+                                        <option>Color</option>
+                                        <option>Glacier White</option>
+                                        <option>White</option>
+                                        <option>Silver</option>
+                                        <option>Sterling Gray</option>
+                                        <option>Black</option>
+                                        <option>Yellow</option>
+                                        <option>Roso Dino</option>
+                                        <option>Night Black</option>
+                                        <option>Blue</option>
+                                        <option>Gray</option>
+                                    </select>
+                                    <select class="select">
+                                        <option>Engine</option>
+                                        <option>1.6L Turbo I4</option>
+                                        <option>2.0L I4 DOHC</option>
+                                        <option>2.3L I4 16V DOHC</option>
+                                        <option>2.7L I4</option>
+                                        <option>3.0L V6 Super Charge </option>
+                                        <option>3.5L V6 MPFI DOHC</option>
+                                        <option>3.6L H6 Twin Turbo</option>
+                                        <option>4.0L V6</option>
+                                        <option>4.3L V8 Twin Turbo</option>
+                                        <option>5.0L NA V8</option>
+                                    </select>
+                                </div>
+
+                                <button class="car-filter__btn">RESET ALL</button>
+
+                            </div>
+
+                            <div class="car-question">
+                                <h4 class="title">
+                                    Prequently Asked Questions
+                                </h4>
+                                <div class="question-list">
+                                    <div class="questtion-list__title">
+                                        <p>
+                                            <i class="fas fa-circle dot-red"></i>
+                                           What can I expect from Car Dealer?
+                                        </p>
+                                        <i id="1" class="fa-solid fa-plus icon-plus"></i>
+                                        <i id="1" class="fa-solid fa-minus icon-minus"></i>
+                                    </div>
+                                    <div class="question-list__content">
+                                        <p>
+                                            We can help with your financing plan,
+                                 we can offer some tips and tricks. Drive off with this
+                                  dream car of yours regardless of your credit history.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="question-list">
+                                    <div class="questtion-list__title">
+                                        <p>
+                                            <i class="fas fa-circle dot-red"></i>
+                                           How far in advand do I need to place my oder?
+                                        </p>
+                                        <i id="2" class="fa-solid fa-plus icon-plus"></i>
+                                        <i id="2" class="fa-solid fa-minus icon-minus"></i>
+                                    </div>
+                                    <div class="question-list__content">
+                                        <p>
+                                            We can help with your financing plan,
+                                 we can offer some tips and tricks. Drive off with this
+                                  dream car of yours regardless of your credit history.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="question-list">
+                                    <div class="questtion-list__title">
+                                        <p>
+                                            <i class="fas fa-circle dot-red"></i>
+                                           Is the car buying process complicated?
+                                        </p>
+                                        <i id="3" class="fa-solid fa-plus icon-plus"></i>
+                                        <i id="3" class="fa-solid fa-minus icon-minus"></i>
+                                    </div>
+                                    <div class="question-list__content">
+                                        <p>
+                                            We can help with your financing plan,
+                                 we can offer some tips and tricks. Drive off with this
+                                  dream car of yours regardless of your credit history.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="question-list">
+                                    <div class="questtion-list__title">
+                                        <p>
+                                            <i class="fas fa-circle dot-red"></i>
+                                           What if I make a deposit and don't want to buy anymore?
+                                        </p>
+                                        <i id="4" class="fa-solid fa-plus icon-plus"></i>
+                                        <i id="4" class="fa-solid fa-minus icon-minus"></i>
+                                    </div>
+                                    <div class="question-list__content">
+                                        <p>
+                                            We can help with your financing plan,
+                                 we can offer some tips and tricks. Drive off with this
+                                  dream car of yours regardless of your credit history.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </aside>
+    
+                    <div class="col-lg-8 col-md-8 col-12">
+                        <div class="main-content">
+                            <div class="loading">
+                                <div class="loading-wraper">
+                                    <div class="inner one"></div>
+                                    <div class="inner two"></div>
+                                    <div class="inner three"></div>
+                                </div>
+                            </div>
+    
+                            <div class="after-loading">
+                                <div class="top-content-right">
+                                    <h6 class="title">
+                                        Cars List
+                                    </h6>
+
+                                    <div class="count-product">
+                                        <div class="count"></div>
+                                        <span>Availabel</span>
+                                    </div>
+                                </div>
+                                <div class="content-wraper"></div>
+                            </div>
+                        </div>
+
+                        <div class="content-panigation">
+                            <ul class="pagination-list">
+                                <li class="item-wide-first">
+                                    <a class="link-wide-first" href="#breadcrumb">
+                                        <i class="panigation-icon fa-solid fa-angles-left"></i>
+                                        Previous
+                                    </a>
+                                </li>
+
+                                <li class="pagination-item first-number">
+                                    <a id="1" class="pagination-link is-active" href="#breadcrumb">1</a>
+                                </li>
+
+                                <li class="pagination-item">
+                                    <a id="2" class="pagination-link" href="#breadcrumb">2</a>
+                                </li>
+
+                                <li class="pagination-item">
+                                    <a id="3" class="pagination-link" href="#breadcrumb">3</a>
+                                </li>
+
+                                <li class="pagination-item">
+                                    <a id="4" class="pagination-link" href="#breadcrumb">4</a>
+                                </li>
+
+                                <li class="pagination-item">
+                                    <a id="5" class="pagination-link" href="#breadcrumb">5</a>
+                                </li>
+                                
+                                <li class="item-wide-last">
+                                    <a class="link-wide-last" href="#breadcrumb">
+                                        Next
+                                        <i class="panigation-icon fa-solid fa-angles-right"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="car-question sup-car-question">
+                            <h4 class="title">
+                                Prequently Asked Questions
+                            </h4>
+                            <div class="question-list">
+                                <div class="questtion-list__title">
+                                    <p>
+                                        <i class="fas fa-circle dot-red"></i>
+                                       What can I expect from Car Dealer?
+                                    </p>
+                                    <i id="5" class="fa-solid fa-plus icon-plus"></i>
+                                    <i id="5" class="fa-solid fa-minus icon-minus"></i>
+                                </div>
+                                <div class="question-list__content">
+                                    <p>
+                                        We can help with your financing plan,
+                                 we can offer some tips and tricks. Drive off with this
+                                  dream car of yours regardless of your credit history.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="question-list">
+                                <div class="questtion-list__title">
+                                    <p>
+                                        <i class="fas fa-circle dot-red"></i>
+                                       How far in advand do I need to place my oder?
+                                    </p>
+                                    <i id="6" class="fa-solid fa-plus icon-plus"></i>
+                                    <i id="6" class="fa-solid fa-minus icon-minus"></i>
+                                </div>
+                                <div class="question-list__content">
+                                    <p>
+                                        We can help with your financing plan,
+                                 we can offer some tips and tricks. Drive off with this
+                                  dream car of yours regardless of your credit history.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="question-list">
+                                <div class="questtion-list__title">
+                                    <p>
+                                        <i class="fas fa-circle dot-red"></i>
+                                       Is the car buying process complicated?
+                                    </p>
+                                    <i id="7" class="fa-solid fa-plus icon-plus"></i>
+                                    <i id="7" class="fa-solid fa-minus icon-minus"></i>
+                                </div>
+                                <div class="question-list__content">
+                                    <p>
+                                        We can help with your financing plan,
+                                 we can offer some tips and tricks. Drive off with this
+                                  dream car of yours regardless of your credit history.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="question-list">
+                                <div class="questtion-list__title">
+                                    <p>
+                                        <i class="fas fa-circle dot-red"></i>
+                                       What if I make a deposit and don't want to buy anymore?
+                                    </p>
+                                    <i id="8" class="fa-solid fa-plus icon-plus"></i>
+                                    <i id="8" class="fa-solid fa-minus icon-minus"></i>
+                                </div>
+                                <div class="question-list__content">
+                                    <p>
+                                        We can help with your financing plan,
+                                 we can offer some tips and tricks. Drive off with this
+                                  dream car of yours regardless of your credit history.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-top">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 col-12">
+                        <div class="footer-box">
+                            <h4 class="footer-box__title">about us</h4>
+                            <p>Quang Phi Auto, Award-winning, family owned dealership of
+                                new and pre-owned vehicles with several locations across the city.
+                                 Lowest prices and the best customer service guaranteed.</p>
+                            <ul class="footer-box__about">
+                                <li>
+                                    <a href="">
+                                        <i class="fa-brands fa-square-facebook"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <i class="fa-brands fa-square-instagram"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <i class="fa-brands fa-square-youtube"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <i class="fa-brands fa-square-snapchat"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-2 col-md-6 col-12">
+                        <div class="footer-box">
+                            <h4 class="footer-box__title"></h4>
+                            <ul class="footer-box__service">
+                                <li>
+                                    <a href="">
+                                        <i class="fa-solid fa-chevron-right"></i>
+                                        Listing</a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <i class="fa-solid fa-chevron-right"></i>
+                                        FAQ</a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <i class="fa-solid fa-chevron-right"></i>
+                                        About Us</a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <i class="fa-solid fa-chevron-right"></i>
+                                        Service</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-2 col-md-6 col-12">
+                        <div class="footer-box">
+                            <h4 class="footer-box__title"></h4>
+                            <ul class="footer-box__service">
+                                <li>
+                                    <a href="">
+                                        <i class="fa-solid fa-chevron-right"></i>
+                                        Blog</a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <i class="fa-solid fa-chevron-right"></i>
+                                        Our team</a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <i class="fa-solid fa-chevron-right"></i>
+                                        ABC
+                                        </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <i class="fa-solid fa-chevron-right"></i>
+                                        XYZ
+                                        </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 col-12">
+                        <div class="footer-box">
+                            <h4 class="footer-box__title">contact us</h4>
+                            <ul class="footer-box__contact">
+                                <li>
+                                    <i class="fa-solid fa-location-crosshairs"></i>
+                                    <span>address</span>    
+                                    <p>#2997 Road, Ho Chi Minh City, Vietnam</p>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <i class="fa-solid fa-mobile-screen-button"></i>
+                                    <span>phone</span>   
+                                    <p>0964-298-523</p>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <i class="fa-solid fa-fax"></i>
+                                    <span>fax</span>    
+                                    <p>(123) 123 456</p>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <i class="fa-solid fa-envelope-open-text"></i>
+                                    <span>email</span>  
+                                    <p>xx.quangphi.2.9@gmail.com</p>
+                                    </a>
+                                </li>
+
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <span>© Copyright 2022</span>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="author-name">
+                            <span>Made By Quang Phi</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./sources/javascrip/base.js"></script>
+    <script type="module" src="./sources/javascrip/products.mjs"></script>
+</body>
+</html>
+
